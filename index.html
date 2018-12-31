@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tranistions</title>
+	<style type="text/css">
+		.wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 200px;
+			height: 200px;
+			border: 4px solid #ddd;
+			background: #999; 
+		}
+		.box {
+			width: 100px;
+			height: 100px;
+			background: pink;
+			pointer-events: none;
+			transition: transform 900ms ease-in-out 200ms;
+		}
+		.wrapper:hover .box {
+			transform: translate(200px) rotate(360deg) scale(1.2);
+		}
+		.container { 
+			display: flex;
+			flex-direction: column;
+			height: 70vh;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			color: red;
+			overflow: hidden;
+			background: url('bg.jpg') no-repeat center center/cover;
+		}
+		.animated {
+			font-family: 'charm', cursive;
+			margin: 0;
+			padding: 0;
+			font-size: 6rem;
+			background: url('index.png') no-repeat;
+			background-clip: text;
+			-webkit-background-clip: text;
+			color: transparent;
+			animation: moveBg 8s linear infinite; 
+			-webkit-animation: moveBg 8s linear infinite; 
+		}
+		@keyframes moveBg {
+			0% {
+				background-position: 0% 30%;
+			}
+			100% {
+				background-position: 100% 50%;
+			}
+		}
+	</style>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=charm">
+</head>
+<body>
+
+	<div class="container">
+		<h1 class="animated">Merry christmas</h1>
+	</div>
+	<div class="wrapper">
+		<div class="box">
+		</div>
+	</div>
+</body>
+</html>
